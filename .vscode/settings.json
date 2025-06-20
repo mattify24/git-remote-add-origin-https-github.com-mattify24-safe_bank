@@ -1,0 +1,23 @@
+{
+    "dbcode.connections": [
+        {
+            "connectionId": "vyhcWKWeqndfyV2o1Suoe",
+            "name": "Project",
+            "driver": "mongodb",
+            "connectionType": "host",
+            "driverOptions": {
+                "protocol": "mongodb://"
+            },
+            "host": "localhost",
+            "port": 27017,
+            "ssl": false,
+            "username": "alex_jones",
+            "password": "",
+            "savePassword": "secretStorage",
+            "database": "Bankit",
+            "readOnly": false,
+            "role": "development",
+            "connectionTimeout": 600
+        }
+    ]
+}

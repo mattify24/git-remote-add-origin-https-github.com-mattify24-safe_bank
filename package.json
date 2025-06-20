@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@netlify/neon": "^0.1.0",
+    "@supabase/supabase-js": "^2.50.0",
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.44.2",
+    "react-router-dom": "^6.30.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.1",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "netlify dev:exec drizzle-kit migrate",
+    "db:studio": "netlify dev:exec drizzle-kit studio"
+  }
+}
