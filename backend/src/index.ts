@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from './routes'; // ensure the path is correct
+import api from './api'; // <-- use './api' not './routes'
 import cors from 'cors';
 import dotenv from 'dotenv';
 
@@ -14,8 +14,8 @@ app.use(cors({ origin: 'http://localhost:8080' }));
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-// Mount your routes at /api
-app.use('/api', routes);
+// Mount your API routers at /api
+app.use('/api', api);
 
 // Optional: handle 404 for undefined routes
 app.use((req, res) => {

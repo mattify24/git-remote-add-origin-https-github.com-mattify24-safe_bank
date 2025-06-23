@@ -1,10 +1,10 @@
-import { Router } from 'express';
-import { asyncHandler } from '../utils/asyncHandler';
+// ../utils/asyncHandler.ts
+import { Request, Response, NextFunction } from 'express';
 
-const router = Router();
-
-router.get('/example', asyncHandler(async (req, res, next) => {
-  res.json({ message: 'Hello' });
-}));
-
-export default router;
+export const asyncHandler = (
+  fn: (req: Request, res: Response, next: NextFunction) => Promise<void>
+) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    fn(req, res, next).catch(next);
+  };
+};
